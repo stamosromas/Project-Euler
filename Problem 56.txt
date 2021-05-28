@@ -1,0 +1,15 @@
+def dig_sum(n):
+    su=0
+    while(n!=0):
+        su+=n%10
+        n//=10
+    return su
+
+m=0
+v=0
+for i in range(0,101):
+    for j in range(0,101):
+       v=i**j
+       if(dig_sum(v)>m):
+           m=dig_sum(v)
+print(m)

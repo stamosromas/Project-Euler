@@ -1,0 +1,15 @@
+def tot_dig(num):
+    su=0
+    while(num!=0):
+        num=num//10
+        su+=1
+    return su
+
+x=10000*[0]
+x[0]=1
+x[1]=1
+for i in range(2,10000):
+    x[i]=x[i-1]+x[i-2]
+    if(tot_dig(x[i])==1000):
+        break
+print(i+1)    

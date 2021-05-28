@@ -1,0 +1,13 @@
+f=open('Problem13.txt','r')
+#print(f.read(1)+f.read(2))
+def sum_finder(n):
+    s=0
+    while(n!=0):
+        s+=n%10
+        n//=10
+    return s
+    
+su=0
+for x in f:
+    su=su+(int(x))
+print(su)
